@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#120d1c">
+  <meta name="description" content="Три карты судьбы — развлекательные предсказания на Хэллоуин 2026 от компании «Ваша Безопасность». Выбери карту и узнай, что готовят выходные.">
+  <meta name="color-scheme" content="dark">
+  <title>Три карты судьбы — Хэллоуин 2026</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <div class="ambience" aria-hidden="true"><div class="mist mist-one"></div><div class="mist mist-two"></div><div id="stars"></div></div>
+  <svg class="web web-left" viewBox="0 0 240 240" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width=".65"><path d="M0 0L240 20M0 0L225 90M0 0L190 170M0 0L90 225M0 0L20 240M0 0L175 240"/><path d="M50 4Q45 17 47 19Q38 25 40 36Q28 35 20 50Q8 42 4 50M100 8Q88 34 94 38Q74 50 80 72Q55 68 40 100Q18 84 8 100M150 12Q133 50 141 57Q110 75 120 108Q82 104 60 150Q26 125 12 150M200 16Q178 67 188 76Q148 100 160 144Q108 138 80 200Q35 166 16 200"/></g></svg>
+  <svg class="web web-right" viewBox="0 0 240 240" aria-hidden="true"><use href="#web-art"/><g fill="none" stroke="currentColor" stroke-width=".65"><path d="M0 0L240 20M0 0L225 90M0 0L190 170M0 0L90 225M0 0L20 240"/><path d="M70 6Q61 24 66 27Q50 35 55 49Q39 48 28 70Q13 57 6 70M140 12Q123 48 132 54Q100 70 110 98Q78 96 56 140Q26 114 12 140M210 18Q184 72 198 81Q150 105 165 147Q117 144 84 210Q39 171 18 210"/></g></svg>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="Ваша Безопасность — на главную"><span class="brand-mark">✧</span><span>ВАША БЕЗОПАСНОСТЬ<small>Потусторонний отдел предсказаний</small></span></a>
+    <div class="top-actions"><span class="event-date">30 октября 2026</span><button id="sound" class="sound" type="button" aria-pressed="false" aria-label="Включить звук"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5L6 9H3v6h3l5 4zM16 9l5 6m0-6l-5 6"/></svg><span>Звук выкл.</span></button></div>
+  </header>
+  <main>
+    <section class="intro" aria-labelledby="title">
+      <div class="eyebrow"><span></span> HALLOWEEN · 2026 <span></span></div>
+      <h1 id="title"><span class="sr-only">🔮 </span>Три карты <em>судьбы</em></h1>
+      <p class="subtitle">Гадальная лавка офисной нечисти</p>
+      <p class="invitation">Смертный, тёмные силы уже заглянули в твоё будущее.<br class="desktop-break"> Осмелишься узнать, что ждёт тебя на выходных?</p>
+      <p class="weekend"><span>✦</span> Предсказания на 31 октября — 1 ноября <span>✦</span></p>
+    </section>
+    <section id="ritual" class="ritual" aria-label="Выбор карты">
+      <div class="name-group"><label for="soul-name">Как тебя зовут, заблудшая душа?</label><div class="input-wrap"><span aria-hidden="true">✧</span><input id="soul-name" name="name" type="text" placeholder="Впиши своё имя…" maxlength="40" autocomplete="off" aria-describedby="name-error" spellcheck="false"><span aria-hidden="true">✧</span></div><p id="name-error" class="error" role="alert"></p></div>
+      <div class="choose-label"><span></span> ПРИСЛУШАЙСЯ К СЕБЕ. ВЫБЕРИ ОДНУ КАРТУ. <span></span></div>
+      <div class="deck-wrap">
+        <div id="deck" class="deck"></div>
+        <div id="reading" class="reading" hidden role="status" aria-live="polite"><div class="orb"><span>✧</span></div><p>Тёмные силы совещаются…</p><small>Пока без протокола и согласований</small></div>
+      </div>
+      <p class="deck-note"><span aria-hidden="true">☾</span> Одно касание — и завеса будущего приоткроется</p>
+    </section>
+    <section id="result" class="result-section" hidden aria-labelledby="result-name">
+      <div id="fortune-card" class="fortune-card"><div class="fortune-corner corner-a">✧</div><div class="fortune-corner corner-b">✧</div><div class="fortune-corner corner-c">✧</div><div class="fortune-corner corner-d">✧</div><p id="rare-label" class="rare-label" hidden>✦ ВЕЛИКОЕ ПРОРОЧЕСТВО ✦</p><div id="result-symbol" class="result-symbol" aria-hidden="true"></div><p class="fortune-eyebrow">ЗАВЕСА ПРИОТКРЫТА ДЛЯ ТЕБЯ,</p><h2 id="result-name" tabindex="-1"></h2><p id="result-category" class="result-category"></p><div class="fortune-divider">✦</div><p id="result-text" class="result-text"></p><p class="fortune-dates">31 октября — 1 ноября 2026</p></div>
+      <div class="result-actions"><button id="save" class="btn btn-primary" type="button"><span aria-hidden="true">↓</span> Сохранить PNG</button><button id="copy" class="btn btn-secondary" type="button">Скопировать</button><button id="share" class="btn btn-secondary" type="button">Поделиться ↗</button></div>
+      <button id="again" class="again" type="button">↻ &nbsp; Испытать судьбу снова</button>
+    </section>
+    <div class="privacy-note"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 11h14v10H5zM8 11V7a4 4 0 018 0v4"/></svg>Твоё имя останется между тобой и тёмными силами.<br class="mobile-break"> Ничего не отправляем и не запоминаем.</div>
+  </main>
+  <div class="candle-scene candle-left" aria-hidden="true"><div class="candle tall"><i></i></div><div class="candle short"><i></i></div><span class="candle-base"></span></div>
+  <div class="candle-scene candle-right" aria-hidden="true"><div class="candle short"><i></i></div><div class="candle tall"><i></i></div><span class="candle-base"></span></div>
+  <svg class="bat bat-one" viewBox="0 0 100 45" aria-hidden="true"><path d="M50 20L42 10l-2 10C25 0 7 4 0 0c9 12 8 17 9 26 11-11 16-4 21 2 8-7 12-1 20 17 8-18 12-24 20-17 5-6 10-13 21-2 1-9 0-14 9-26-7 4-25 0-40 20l-2-10z"/></svg>
+  <svg class="bat bat-two" viewBox="0 0 100 45" aria-hidden="true"><path d="M50 20L42 10l-2 10C25 0 7 4 0 0c9 12 8 17 9 26 11-11 16-4 21 2 8-7 12-1 20 17 8-18 12-24 20-17 5-6 10-13 21-2 1-9 0-14 9-26-7 4-25 0-40 20l-2-10z"/></svg>
+  <footer><div class="footer-line"><span></span> ✧ <span></span></div><p>Предсказание выдано тёмными силами ООО «Ваша Безопасность».<br>Обжалованию не подлежит!</p><small>Все совпадения случайны. Ведьмы ответственности не несут. 🎃</small><div class="footer-links"><button id="show-qr" type="button">Пригласить другую душу · QR-код</button><span>РАЗВЛЕКАТЕЛЬНЫЙ РИТУАЛ · 18+</span></div></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <dialog id="share-dialog"><button class="close-dialog" type="button" aria-label="Закрыть">×</button><h2>Передай пророчество</h2><p>На этом устройстве системное меню недоступно. Скопируй текст или сохрани карточку и отправь её в любимый чат.</p><textarea id="share-text" readonly aria-label="Текст предсказания"></textarea><button id="dialog-copy" class="btn btn-primary" type="button">Скопировать текст</button></dialog>
+  <dialog id="qr-dialog"><button class="close-dialog" type="button" aria-label="Закрыть">×</button><p class="eyebrow">ПОРТАЛ ДЛЯ НОВЫХ ДУШ</p><h2>Пригласи коллегу</h2><img src="./qr-code.png" alt="QR-код со ссылкой на Три карты судьбы" width="260" height="260"><p>Отсканируй и узнай свою судьбу</p><a class="btn btn-primary" href="./qr-code.png" download="three-cards-qr.png">Скачать QR-код</a></dialog>
+  <noscript><p class="noscript">Для гадания нужен JavaScript. Включи его в настройках браузера.</p></noscript>
+</body>
+</html>
